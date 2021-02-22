@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  background-color: $bcgHeader;
+  height: $header-height;
+  .container {
+    @include container;
+  }
+  .top {
+    height: calc(#{$header-height} / 2);
+    font-size: .9em;
+    @include flex(flex-end);
+    .item {
+      @include flex(flex-start);
+      margin-right: $m20;
+      i {
+        color: $fontColor5;
+        margin-right: $m5;
+      }
+      span {
+        color: $fontColor3;
+      }
+    }
+  }
+  .bottom {
+    height: calc(#{$header-height} / 2);
+  }
+}

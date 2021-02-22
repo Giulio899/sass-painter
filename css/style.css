@@ -1,1 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-size: 16px;
+}
+
+header {
+  width: 100%;
+  background-color: #101010;
+  height: 100px;
+}
+header .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+header .top {
+  height: calc(100px / 2);
+  font-size: 0.9em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .top .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+}
+header .top .item i {
+  color: #009cff;
+  margin-right: 5px;
+}
+header .top .item span {
+  color: #999;
+}
+header .bottom {
+  height: calc(100px / 2);
+}
