@@ -4,6 +4,8 @@ $fontColor2: #fff;
 $fontColor3: #999;
 $fontColor4: #ca1eb5;
 $fontColor5: #009cff;
+$fontColor6: #4d4d4d;
+
 
 // background-color
 $bcgHeader: #101010;
@@ -13,8 +15,12 @@ $bcgStripe2: #3c3c3c;
 $bcgStripe3: #0072bc;
 $bcgFooter: #1e1e1e;
 
-// width desktop
+// width
 $widthDktp: 1200px;
+
+// height
+$headerHeight: 100px;
+$heightJumbo: 500px;
 
 // margin
 $m5: 5px;
@@ -22,5 +28,8 @@ $m10: 10px;
 $m15: 15px;
 $m20: 20px;
 
-// header top
-$header-height: 100px;
+// padding
+$p5: 5px;
+$p10: 10px;
+$p15: 15px;
+$p20: 20px;

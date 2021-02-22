@@ -1,0 +1,32 @@
+.jumbotron {
+  @include background-cover("../img/bg-painter-home.jpg");
+  height: $heightJumbo;
+  .container {
+    position: relative;
+    height: 100%;
+    .text {
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    img {
+      height: 60px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    p.purple {
+      color: $fontColor4;
+      font-style: oblique;
+      margin-bottom: 60px;
+      span {
+        display: block;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+footer {
+  background-color: $bcgMain;
+  color: $fontColor1;
+  .top {
+    padding: 60px 0;
+    @include flex(flex-start, flex-start);
+    ul {
+      flex-basis: 25%;
+    }
+    li {
+      margin-bottom: 5px;
+      &:first-of-type {
+        margin-bottom: 10px;
+        cursor: default;
+        font-size: .95em;
+      }
+      &:not(:first-of-type) {
+        a {
+          font-size: .8em;
+          font-weight: 300;
+        }
+      }
+      &:not(:first-of-type):hover {
+        text-decoration: underline;
+      }
+      a {
+        color: $fontColor6;
+      }
+    }
+  }
+  .bottom {
+    background-color: $bcgFooter;
+    padding: 20px 0;
+    .container {
+      @include flex(flex-start);
+      .left {
+        flex-basis: 30%;
+        img {
+          height: 50px;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+      }
+      .right {
+        flex-grow: 1;
+        ul {
+          @include flex(flex-end);
+          li {
+            margin-right: 30px;
+            font-size: .85em;
+            color: $fontColor2;
+            a {
+              color: $fontColor3;
+              &:hover {
+                color: $fontColor2;
+                text-decoration: underline; 
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

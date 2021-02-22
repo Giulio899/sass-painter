@@ -1,10 +1,18 @@
 @mixin container {
   width: $widthDktp;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 @mixin flex($justify, $align:center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin background-cover($img_url) {
+  background: url($img_url) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
