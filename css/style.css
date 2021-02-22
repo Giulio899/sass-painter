@@ -235,6 +235,9 @@ footer .top li:not(:first-of-type):hover {
 footer .top li a {
   color: #4d4d4d;
 }
+footer .top .last .icons:hover {
+  text-decoration: none;
+}
 footer .bottom {
   background-color: #1e1e1e;
   padding: 20px 0;

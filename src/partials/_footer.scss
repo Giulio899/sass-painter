@@ -27,6 +27,9 @@ footer {
         color: $fontColor6;
       }
     }
+    .last .icons:hover {
+      text-decoration: none;
+    }
   }
   .bottom {
     background-color: $bcgFooter;
@@ -53,7 +56,7 @@ footer {
               color: $fontColor3;
               &:hover {
                 color: $fontColor2;
-                text-decoration: underline; 
+                text-decoration: underline;
               }
             }
           }
