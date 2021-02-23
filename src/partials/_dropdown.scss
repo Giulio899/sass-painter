@@ -1,35 +1,21 @@
-nav {
-  ul {
-    position: relative;
-    li {
-      &:hover ul {
-        display: block;
-      }
-    }
-    .dropdown {
-      display: block;
-      position: absolute;
-      top: 50px;
-      left: 0;
-      ul {
-        display: none;
-        z-index: 1;
-        li {
-          width: 200px;
-          height: 40px;
-          background-color: $bcgMain;
-          display: flex;
-          @include flex(flex-start);
-          a {
-            display: inline-block;
-            width: 100%;
-            color: $bcgHeader;
-          }
-          &:hover {
-            background-color: #d6d6d6;
-          }
-        }
+.dropdown {
+  display:none;
+  position: absolute;
+  background-color: $bcgMain;
+  z-index: 2;
+  li {
+    a {
+      display: inline-block;
+      width: 100%;
+      color: $fontColor1;
+      font-weight: lighter;
+      &:hover {
+        background-color: #d7d7d7;
       }
     }
   }
+}
+
+nav > ul li:hover .dropdown {
+  display: block;
 }

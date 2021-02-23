@@ -24,7 +24,7 @@ a {
 }
 
 a.btn {
-  padding: 13px 35px;
+  padding: 10px 30px;
   margin-right: 20px;
   text-transform: uppercase;
   font-size: 1.3em;
@@ -42,6 +42,13 @@ a.btn.light {
   border: 2px solid #040707;
 }
 a.btn.light:hover {
+  opacity: 0.8;
+}
+a.btn.white {
+  color: black;
+  background-color: white;
+}
+a.btn.white:hover {
   opacity: 0.8;
 }
 
@@ -93,6 +100,11 @@ header .top .item i {
 }
 header .top .item span {
   color: #999;
+  cursor: pointer;
+}
+header .top .item span:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 header .bottom {
   height: calc(100px / 2);
@@ -107,64 +119,46 @@ header .bottom .container img {
   width: 90px;
   position: relative;
   bottom: 4px;
+  cursor: pointer;
 }
 
 nav {
   flex-grow: 1;
 }
-nav ul {
+nav > ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: calc(20px * 2);
-  padding-right: calc(20px * 6);
+  padding: 0 50px;
 }
-nav ul li {
-  padding: 16px 20px;
+nav > ul li a {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 25px;
 }
-nav ul li i {
-  font-size: 0.6em;
-  color: #999;
-}
-nav ul li:hover {
+nav > ul li a:hover {
+  color: #040707;
   background-color: #e8e8e8;
-}
-nav ul li:hover a {
-  color: #101010;
 }
 
-nav ul {
-  position: relative;
-}
-nav ul li:hover ul {
-  display: block;
-}
-nav ul .dropdown {
-  display: block;
-  position: absolute;
-  top: 50px;
-  left: 0;
-}
-nav ul .dropdown ul {
+.dropdown {
   display: none;
-  z-index: 1;
-}
-nav ul .dropdown ul li {
-  width: 200px;
-  height: 40px;
+  position: absolute;
   background-color: #e8e8e8;
-  display: flex;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  z-index: 2;
 }
-nav ul .dropdown ul li a {
+.dropdown li a {
   display: inline-block;
   width: 100%;
-  color: #101010;
+  color: #040707;
+  font-weight: lighter;
 }
-nav ul .dropdown ul li:hover {
-  background-color: #d6d6d6;
+.dropdown li a:hover {
+  background-color: #d7d7d7;
+}
+
+nav > ul li:hover .dropdown {
+  display: block;
 }
 
 .jumbotron {
@@ -202,6 +196,125 @@ nav ul .dropdown ul li:hover {
 .jumbotron .container p.purple span {
   display: block;
   font-weight: bold;
+}
+
+main {
+  background-color: #e8e8e8;
+}
+main h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2.1em;
+  font-weight: 400;
+  padding: 30px 0;
+}
+
+.painting {
+  padding: 30px 0;
+}
+.painting .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.painting .container .box {
+  flex-basis: calc(100% / 3 - 20px);
+  background-color: white;
+  cursor: pointer;
+}
+.painting .container .box img {
+  width: 100%;
+}
+.painting .container .box .text {
+  padding: 20px;
+}
+.painting .container .box .text span {
+  display: inline-block;
+  margin-right: 5px;
+  color: #009cff;
+  font-style: oblique;
+}
+.painting .container .box .text p {
+  margin: 15px 0;
+}
+.painting .container .box .text a {
+  color: #009cff;
+}
+.painting .container .box .text a:hover {
+  text-decoration: underline;
+}
+.painting .container .box.center {
+  margin: 0 30px;
+}
+
+.stripe-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 325px;
+}
+.stripe-container .left {
+  flex-basis: 50%;
+  height: 100%;
+  color: white;
+  padding: 60px 50px;
+}
+.stripe-container .left h3 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+.stripe-container .left p {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.stripe-container .left a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: 300;
+}
+.stripe-container .right {
+  height: 100%;
+  flex-basis: 50%;
+}
+.stripe-container .right img {
+  width: 70%;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.stripe-container.wacom .left {
+  background-color: #3c1567;
+}
+.stripe-container.wacom .right {
+  background: url("../img/wacom-painter.jpg") no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.stripe-container.masters .left {
+  background-color: #3c3c3c;
+}
+.stripe-container.masters .right {
+  background: url("../img/painter-master.jpg") no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.stripe-container.business .left {
+  background-color: #0072bc;
+}
+.stripe-container.business .right {
+  background: url("../img/business-education.jpg") no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 footer {

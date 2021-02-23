@@ -1,24 +1,18 @@
 nav {
   flex-grow: 1;
-  ul {
+  & > ul {
     @include flex(space-between);
-    padding-left: calc(#{$p20} * 2);
-    padding-right: calc(#{$p20} * 6);
+    padding: 0 50px;
     li {
-      padding: 16px 20px;
       a {
-      }
-      i {
-        font-size: .6em;
-        color: $fontColor3;
-      }
-      &:hover {
-        background-color: $bcgMain;
-      }
-      &:hover a {
-        color: $bcgHeader;
+        display: inline-block;
+        line-height: 50px;
+        padding: 0 25px;
+        &:hover {
+          color: $fontColor1;
+          background-color: $bcgMain;
+        }
       }
     }
   }
-
 }

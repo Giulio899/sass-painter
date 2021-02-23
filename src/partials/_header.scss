@@ -15,6 +15,11 @@ header {
       }
       span {
         color: $fontColor3;
+        cursor: pointer;
+        &:hover {
+          color: $fontColor2;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -27,6 +32,7 @@ header {
         width: 90px;
         position: relative;
         bottom: 4px;
+        cursor: pointer;
       }
     }
   }

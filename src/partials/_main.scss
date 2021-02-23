@@ -1,0 +1,118 @@
+main {
+  background-color: $bcgMain;
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.1em;
+    font-weight: 400;
+    padding: 30px 0;
+  }
+}
+
+// stripe 1
+.painting {
+  padding: 30px 0;
+
+  .container {
+    @include flex(flex-start);
+    flex-wrap: wrap;
+
+    .box {
+      flex-basis: calc(100% / 3 - 20px);
+      background-color: white;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+      .text {
+        padding: 20px;
+        span {
+          display: inline-block;
+          margin-right: 5px;
+          color: $fontColor5;
+          font-style: oblique;
+        }
+        p {
+          margin: 15px 0;
+        }
+        a {
+          color: $fontColor5;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .box.center {
+      margin: 0 30px;
+    }
+  }
+}
+
+// stripe 2
+.stripe-container {
+  @include flex(flex-start);
+  height: 325px;
+
+  .left {
+    flex-basis: 50%;
+    height: 100%;
+    color: white;
+    padding: 60px 50px;
+    h3 {
+      font-size: 1.8em;
+      font-weight: 400;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1em;
+      font-weight: 300;
+    }
+  }
+
+  .right {
+    height: 100%;
+    flex-basis: 50%;
+
+    img {
+      width: 70%;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+  }
+
+  // personalizzazione stripe 1: Wacom + Painter 2021
+  &.wacom .left {
+    background-color: $bcgStripe1;
+  }
+  &.wacom .right {
+    @include background-cover("../img/wacom-painter.jpg");
+  }
+
+  // personalizzazione stripe 2: Painter Masters (left e right invertiti)
+  &.masters .left {
+    background-color: $bcgStripe2;
+  }
+  &.masters .right {
+    @include background-cover("../img/painter-master.jpg");
+  }
+
+  // personalizzazione stripe 3: Business & Education
+  &.business .left {
+    background-color: $bcgStripe3;
+  }
+  &.business .right {
+    @include background-cover("../img/business-education.jpg");
+  }
+
+
+}
